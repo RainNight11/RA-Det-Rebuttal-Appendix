@@ -161,3 +161,48 @@
   </tr>
   </tbody>
 </table>
+
+
+## Table 2.
+
+*Detection performance comparison of RA-Det variants under different training configurations. We report ACC(%)/AP(%) as evaluation metrics. RA-Det(sdv1.4) and RA-Det(progan+sdv1.4) denote models trained on SDv1.4 only and the combined ProGAN+SDv1.4 dataset, respectively. The results highlight the impact of training data composition on generalization performance across diverse generators.*
+
+<table>
+  <thead>
+    <tr>
+      <th>Model</th>
+      <th>ProGAN</th><th>StyleGAN</th><th>BigGAN</th><th>CycleGAN</th>
+      <th>StarGAN</th><th>GauGAN</th><th>StyleGAN2</th><th>whichfaceisreal</th>
+      <th>ADM</th><th>Glide</th><th>SDv1.4</th><th>SDv1.5</th><th>VQDM</th>
+      <th>Midjourney</th><th>wukong</th><th>DALLE2</th><th>Average</th>
+    </tr>
+  </thead>
+  <tbody>
+
+  <tr>
+    <td>RA-Det (ours)</td>
+    <td>99.98/100.00</td><td>94.98/98.90</td><td>98.35/99.83</td><td>96.52/99.47</td>
+    <td>99.92/100.00</td><td>99.51/99.77</td><td>95.54/99.15</td><td>72.20/81.13</td>
+    <td>88.89/95.07</td><td>92.94/97.83</td><td>96.50/99.08</td><td>96.01/98.92</td><td>94.43/98.68</td>
+    <td>80.04/87.53</td><td>95.33/98.33</td><td>94.30/98.14</td><td>93.47/97.00</td>
+  </tr>
+
+  <tr>
+    <td>RA-Det (sdv1.4)</td>
+    <td>95.49/99.00</td><td>96.48/99.27</td><td>90.83/96.44</td><td>82.17/89.55</td>
+    <td>95.75/99.27</td><td>91.21/97.32</td><td>96.21/99.37</td><td>86.41/93.28</td>
+    <td>78.87/87.76</td><td>95.60/98.34</td><td>98.95/99.83</td><td>98.65/99.83</td><td>93.88/98.29</td>
+    <td>94.61/98.11</td><td>97.92/99.72</td><td>91.10/96.10</td><td>92.70/96.99</td>
+  </tr>
+
+  <tr>
+    <td>RA-Det (progan+sdv1.4)</td>
+    <td>99.39/99.95</td><td>93.32/97.84</td><td>96.10/98.49</td><td>95.68/99.17</td>
+    <td>100.00/100.00</td><td>93.10/93.82</td><td>90.23/96.51</td><td>85.10/87.57</td>
+    <td>85.32/93.50</td><td>93.17/97.03</td><td>96.81/99.31</td><td>96.99/99.32</td><td>92.32/96.65</td>
+    <td>87.07/91.49</td><td>95.18/98.12</td><td>93.95/98.43</td><td>93.33/96.69</td>
+  </tr>
+
+  </tbody>
+</table>
+
