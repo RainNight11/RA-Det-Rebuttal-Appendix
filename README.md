@@ -1,4 +1,4 @@
-# RA-Det-Rebuttal
+# Rebuttal Appendix -- RA-Det: Towards Universal Detection of AI-Generated Images via Robustness Asymmetry
 
 <table>
   <thead>
