@@ -167,6 +167,10 @@
 *Robustness statistics under controlled perturbations. We report feature similarity and distance metrics between clean and perturbed representations for real and generated images across multiple generators.*
 
 *(a) Per-generator results under different perturbation strengths (Std = 0.03, 0.05, 0.1).*
+
+
+
+
 | Model | Type | Std | Count | Cosine (mean) | Cosine (std) | L2 Similarity (mean) | L2 Similarity (std) | Euclidean Distance (mean) | Euclidean Distance (std) | Standardized Euclidean (mean) | Standardized Euclidean (std) | Manhattan Distance (mean) | Manhattan Distance (std) |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | ADM | Real | 0.03 | 6000 | 0.97507165 | 0.023516 | 0.107476 | 0.037319 | 9.508264871 | 3.844709044 | 31.98551 | 0.001629 | 242.1528631 | 97.93321001 |
