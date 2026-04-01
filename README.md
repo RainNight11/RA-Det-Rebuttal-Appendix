@@ -178,6 +178,8 @@
   </tr>
   </tbody>
 </table>
+
+
 ## Table 2.
 
 *Robustness statistics under controlled perturbations. We report feature similarity and distance metrics between clean and perturbed representations for real and generated images across multiple generators.*
