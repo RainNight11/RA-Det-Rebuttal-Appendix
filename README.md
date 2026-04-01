@@ -3,14 +3,13 @@
 ## Table 1. 
 *Cross-generator generalization results across GAN, diffusion, and additional generators. Models are trained on ProGAN and evaluated on unseen generators. Results show that RA-Det consistently achieves strong performance, particularly on additional generators introduced in the rebuttal.*
 
-*(a) Accuracy (ACC ↑)* 
-
 <table>
   <thead>
     <tr>
       <th rowspan="2">Model</th>
       <th colspan="7">Additional Generators</th>
       <th colspan="16">Original Generators</th>
+      <th rowspan="2">Average</th>
     </tr>
     <tr>
       <th>SDXL</th><th>SDv3.5</th><th>FLUX</th><th>FLUX1-dev</th><th>Midjourney v6</th><th>Infinity</th><th>VAR</th>
@@ -19,40 +18,47 @@
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <td>UnivFD</td>
-      <td>55.34</td><td>60.10</td><td>27.50</td><td>38.99</td><td>25.12</td><td>66.13</td><td>68.62</td>
-      <td>99.81</td><td>80.40</td><td>95.08</td><td>98.33</td><td>95.75</td><td>99.47</td><td>70.76</td><td>86.09</td>
-      <td>67.46</td><td>63.09</td><td>63.66</td><td>63.49</td><td>86.01</td><td>56.13</td><td>70.93</td><td>50.75</td>
-    </tr>
+
+  <tr>
+    <td>UnivFD</td>
+    <td>55.34</td><td><u>60.10</u></td><td>27.50</td><td>38.99</td><td>25.12</td><td>66.13</td><td>68.62</td>
+    <td><u>99.81</u></td><td>80.40</td><td><u>95.08</u></td><td>98.33</td><td>95.75</td><td><u>99.47</u></td><td>70.76</td><td>86.09</td>
+    <td>67.46</td><td>63.09</td><td>63.66</td><td>63.49</td><td>86.01</td><td>56.13</td><td>70.93</td><td>50.75</td>
+    <td>68.94</td>
+  </tr>
 
   <tr>
     <td>NPR</td>
-    <td>48.23</td><td>43.60</td><td>47.85</td><td>53.63</td><td>39.98</td><td>59.52</td><td>39.47</td>
-    <td>99.90</td><td>96.06</td><td>83.95</td><td>95.19</td><td>97.17</td><td>80.94</td><td>95.61</td><td>60.60</td>
+    <td>48.23</td><td>43.60</td><td><u>47.85</u></td><td>53.63</td><td>39.98</td><td>59.52</td><td>39.47</td>
+    <td><u>99.90</u></td><td><u>96.06</u></td><td>83.95</td><td>95.19</td><td>97.17</td><td>80.94</td><td><u>95.61</u></td><td>60.60</td>
     <td>70.58</td><td>75.18</td><td>76.81</td><td>70.58</td><td>73.22</td><td>76.61</td><td>74.45</td><td>61.88</td>
+    <td>69.61</td>
   </tr>
 
   <tr>
     <td>DRCT</td>
-    <td>82.87</td><td>80.45</td><td>61.65</td><td>70.52</td><td>50.03</td><td>86.62</td><td>76.98</td>
-    <td>100.00</td><td>96.91</td><td>99.40</td><td>99.51</td><td>100.00</td><td>99.51</td><td>96.80</td><td>92.08</td>
-    <td>86.53</td><td>92.76</td><td>94.05</td><td>92.34</td><td>95.71</td><td>62.97</td><td>94.09</td><td>84.37</td>
+    <td><u>82.87</u></td><td><b>80.45</b></td><td><b>61.65</b></td><td>70.52</td><td>50.03</td><td><u>86.62</u></td><td>76.98</td>
+    <td><b>100.00</b></td><td>96.91</td><td><b>99.40</b></td><td><b>99.51</b></td><td><b>100.00</b></td><td><b>99.51</b></td><td><b>96.80</b></td><td><u>92.08</u></td>
+    <td>86.53</td><td>92.76</td><td>94.05</td><td>92.34</td><td><u>95.71</u></td><td>62.97</td><td>94.09</td><td>84.37</td>
+    <td>83.79</td>
   </tr>
 
   <tr>
     <td>FerretNet</td>
-    <td>83.59</td><td>61.20</td><td>53.00</td><td>80.44</td><td>69.58</td><td>78.38</td><td>77.93</td>
-    <td>99.84</td><td>98.65</td><td>94.00</td><td>99.51</td><td>99.08</td><td>93.10</td><td>96.87</td><td>50.40</td>
-    <td>95.94</td><td>94.68</td><td>96.64</td><td>96.68</td><td>97.99</td><td>97.69</td><td>96.04</td><td>97.75</td>
+    <td>83.59</td><td>61.20</td><td>53.00</td><td><u>80.44</u></td><td><u>69.58</u></td><td>78.38</td><td><u>77.93</u></td>
+    <td>99.84</td><td><b>98.65</b></td><td>94.00</td><td><b>99.51</b></td><td>99.08</td><td>93.10</td><td>96.87</td><td>50.40</td>
+    <td><b>95.94</b></td><td><b>94.68</b></td><td><b>96.64</b></td><td><b>96.68</b></td><td><b>97.99</b></td><td><b>97.69</b></td><td><b>96.04</b></td><td><b>97.75</b></td>
+    <td>88.35</td>
   </tr>
 
   <tr>
     <td><b>RA-Det</b></td>
-    <td><b>96.29</b></td><td><b>75.61</b></td><td><b>57.19</b></td><td><b>80.58</b></td><td><b>74.97</b></td><td><b>88.32</b></td><td><b>91.63</b></td>
-    <td><b>99.98</b></td><td>94.98</td><td><b>98.35</b></td><td>96.52</td><td><b>99.92</b></td><td><b>99.51</b></td><td>95.54</td><td><b>72.20</b></td>
-    <td>88.89</td><td>92.94</td><td>96.50</td><td>96.01</td><td>94.43</td><td>80.04</td><td>95.33</td><td>94.30</td>
+    <td><b>96.29</b></td><td>75.61</td><td>57.19</td><td><b>80.58</b></td><td><b>74.97</b></td><td><b>88.32</b></td><td><b>91.63</b></td>
+    <td>99.98</td><td>94.98</td><td>98.35</td><td>96.52</td><td><u>99.92</u></td><td><b>99.51</b></td><td>95.54</td><td><b>72.20</b></td>
+    <td><u>88.89</u></td><td><u>92.94</u></td><td><u>96.50</u></td><td><u>96.01</u></td><td>94.43</td><td><u>80.04</u></td><td><u>95.33</u></td><td><u>94.30</u></td>
+    <td><b>88.77</b></td>
   </tr>
+
   </tbody>
 </table>
 
@@ -64,6 +70,7 @@
       <th rowspan="2">Model</th>
       <th colspan="7">Additional Generators</th>
       <th colspan="16">Original Generators</th>
+      <th rowspan="2">Average</th>
     </tr>
     <tr>
       <th>SDXL</th><th>SDv3.5</th><th>FLUX</th><th>FLUX1-dev</th><th>Midjourney v6</th><th>Infinity</th><th>VAR</th>
@@ -72,43 +79,47 @@
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <td>UnivFD</td>
-      <td>57.42</td><td>71.91</td><td>32.42</td><td>38.10</td><td>33.59</td><td>82.40</td><td>85.05</td>
-      <td>100.00</td><td>97.48</td><td>99.27</td><td>99.80</td><td>99.37</td><td>99.98</td><td>97.71</td><td>96.73</td>
-      <td>89.80</td><td>83.80</td><td>86.14</td><td>85.84</td><td>96.53</td><td>74.00</td><td>91.07</td><td>63.04</td>
-    </tr>
+  <tr>
+    <td>UnivFD</td>
+    <td>57.42</td><td><u>71.91</u></td><td>32.42</td><td>38.10</td><td>33.59</td><td>82.40</td><td><u>85.05</u></td>
+    <td><b>100.00</b></td><td>97.48</td><td><u>99.27</u></td><td><u>99.80</u></td><td>99.37</td><td><b>99.98</b></td><td>97.71</td><td><b>96.73</b></td>
+    <td>89.80</td><td>83.80</td><td>86.14</td><td>85.84</td><td>96.53</td><td>74.00</td><td>91.07</td><td>63.04</td>
+    <td>80.93</td>
+  </tr>
 
   <tr>
     <td>NPR</td>
     <td>51.02</td><td>43.20</td><td>46.35</td><td>65.99</td><td>42.82</td><td>68.40</td><td>40.71</td>
-    <td>99.98</td><td>99.78</td><td>85.59</td><td>98.12</td><td>100.00</td><td>82.97</td><td>99.95</td><td>62.91</td>
+    <td><u>99.98</u></td><td><u>99.78</u></td><td>85.59</td><td>98.12</td><td><b>100.00</b></td><td>82.97</td><td><b>99.95</b></td><td>62.91</td>
     <td>75.08</td><td>83.24</td><td>82.79</td><td>83.80</td><td>77.74</td><td>82.61</td><td>78.17</td><td>71.64</td>
+    <td>74.91</td>
   </tr>
 
   <tr>
     <td>DRCT</td>
-    <td>86.67</td><td>81.67</td><td>62.57</td><td>72.51</td><td>45.73</td><td>92.00</td><td>85.41</td>
-    <td>100.00</td><td>96.91</td><td>99.40</td><td>99.51</td><td>100.00</td><td>99.51</td><td>96.80</td><td>92.08</td>
-    <td>86.53</td><td>92.76</td><td>94.05</td><td>92.34</td><td>95.71</td><td>62.97</td><td>94.09</td><td>84.37</td>
+    <td>86.67</td><td><b>81.67</b></td><td><b>62.57</b></td><td>72.51</td><td>45.73</td><td><b>92.00</b></td><td>85.41</td>
+    <td><b>100.00</b></td><td>96.91</td><td><u>99.40</u></td><td>99.51</td><td><b>100.00</b></td><td><u>99.51</u></td><td>96.80</td><td><u>92.08</u></td>
+    <td>86.53</td><td>92.76</td><td>94.05</td><td>92.34</td><td><u>95.71</u></td><td>62.97</td><td>94.09</td><td>84.37</td>
+    <td>87.55</td>
   </tr>
 
   <tr>
     <td>FerretNet</td>
-    <td>96.461</td><td>64.457</td><td>52.356</td><td>92.826</td><td>78.389</td><td>89.153</td><td>88.297</td>
-    <td>100.00</td><td>99.97</td><td>98.04</td><td>99.996</td><td>99.992</td><td>98.906</td><td>99.909</td><td>83.13</td>
-    <td>99.359</td><td>98.925</td><td>99.638</td><td>99.638</td><td>99.773</td><td>99.674</td><td>99.356</td><td>99.599</td>
+    <td><b>96.46</b></td><td>64.46</td><td>52.36</td><td><b>92.83</b></td><td><b>78.39</b></td><td><u>89.15</u></td><td><b>88.30</b></td>
+    <td><b>100.00</b></td><td><b>99.97</b></td><td>98.04</td><td><b>100.00</b></td><td><u>99.99</u></td><td>98.91</td><td><u>99.91</u></td><td>83.13</td>
+    <td><b>99.36</b></td><td><b>98.93</b></td><td><b>99.64</b></td><td><b>99.64</b></td><td><b>99.77</b></td><td><b>99.67</b></td><td><b>99.36</b></td><td><b>99.60</b></td>
+    <td><b>92.95</b></td>
   </tr>
 
   <tr>
     <td><b>RA-Det</b></td>
-    <td>91.34</td><td><b>81.65</b></td><td><b>61.50</b></td><td>88.40</td><td>70.93</td><td>80.09</td><td>84.16</td>
-    <td><b>100.00</b></td><td>98.90</td><td><b>99.83</b></td><td>99.47</td><td><b>100.00</b></td><td><b>99.77</b></td><td>99.15</td><td>81.13</td>
-    <td>95.07</td><td>97.83</td><td>99.08</td><td>98.92</td><td>98.68</td><td>87.53</td><td>98.33</td><td>98.14</td>
+    <td><u>91.34</u></td><td><u>81.65</u></td><td><u>61.50</u></td><td><u>88.40</u></td><td><u>70.93</u></td><td>80.09</td><td>84.16</td>
+    <td><b>100.00</b></td><td>98.90</td><td><b>99.83</b></td><td>99.47</td><td><b>100.00</b></td><td><u>99.77</u></td><td>99.15</td><td>81.13</td>
+    <td><u>95.07</u></td><td><u>97.83</u></td><td><u>99.08</u></td><td><u>98.92</u></td><td><u>98.68</u></td><td><u>87.53</u></td><td><u>98.33</u></td><td><u>98.14</u></td>
+    <td><u>91.73</u></td>
   </tr>
   </tbody>
 </table>
-
 *(c) TPR at 1% FPR (↑)* 
 
 <table>
@@ -117,6 +128,7 @@
       <th rowspan="2">Model</th>
       <th colspan="7">Additional Generators</th>
       <th colspan="16">Original Generators</th>
+      <th rowspan="2">Average</th>
     </tr>
     <tr>
       <th>SDXL</th><th>SDv3.5</th><th>FLUX</th><th>FLUX1-dev</th><th>Midjourney v6</th><th>Infinity</th><th>VAR</th>
@@ -125,43 +137,47 @@
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <td>UnivFD</td>
-      <td>1.58</td><td>15.20</td><td>0.00</td><td>0.16</td><td>0.17</td><td>14.72</td><td>18.89</td>
-      <td>99.50</td><td>97.50</td><td>89.20</td><td>98.79</td><td>97.48</td><td>99.58</td><td>78.71</td><td>69.20</td>
-      <td>44.40</td><td>52.23</td><td>31.30</td><td>30.10</td><td>66.97</td><td>3.08</td><td>47.58</td><td>9.10</td>
-    </tr>
+  <tr>
+    <td>UnivFD</td>
+    <td>1.58</td><td><u>15.20</u></td><td>0.00</td><td>0.16</td><td>0.17</td><td>14.72</td><td>18.89</td>
+    <td><u>99.50</u></td><td><u>97.50</u></td><td><u>89.20</u></td><td><b>98.79</b></td><td><u>97.48</u></td><td><b>99.58</b></td><td>78.71</td><td><b>69.20</b></td>
+    <td>44.40</td><td>52.23</td><td>31.30</td><td>30.10</td><td>66.97</td><td>3.08</td><td>47.58</td><td>9.10</td>
+    <td>48.62</td>
+  </tr>
 
   <tr>
     <td>NPR</td>
     <td>2.51</td><td>0.00</td><td>0.10</td><td>11.24</td><td>2.03</td><td>11.57</td><td>0.67</td>
     <td>8.32</td><td>20.21</td><td>1.50</td><td>6.05</td><td>2.86</td><td>3.25</td><td>0.79</td><td>0.00</td>
     <td>12.92</td><td>31.07</td><td>1.87</td><td>2.66</td><td>6.47</td><td>4.57</td><td>3.92</td><td>27.80</td>
+    <td>8.46</td>
   </tr>
 
   <tr>
     <td>DRCT</td>
-    <td>14.96</td><td>0.93</td><td>0.29</td><td>4.47</td><td>0.05</td><td>24.67</td><td>23.02</td>
-    <td>95.00</td><td>74.00</td><td>87.60</td><td>87.70</td><td>95.00</td><td>90.80</td><td>76.10</td><td>67.60</td>
-    <td>50.40</td><td>60.70</td><td>65.10</td><td>61.40</td><td>72.30</td><td>15.30</td><td>66.80</td><td>43.00</td>
+    <td>14.96</td><td>0.93</td><td><u>0.29</u></td><td><u>4.47</u></td><td>0.05</td><td><u>24.67</u></td><td><u>23.02</u></td>
+    <td>95.00</td><td>74.00</td><td>87.60</td><td>87.70</td><td>95.00</td><td>90.80</td><td>76.10</td><td><u>67.60</u></td>
+    <td><u>50.40</u></td><td><u>60.70</u></td><td><u>65.10</u></td><td><u>61.40</u></td><td><u>72.30</u></td><td><u>15.30</u></td><td><u>66.80</u></td><td><u>43.00</u></td>
+    <td><u>57.12</u></td>
   </tr>
 
   <tr>
     <td>FerretNet</td>
-    <td>96.44</td><td>0.00</td><td>0.00</td><td>94.07</td><td>48.07</td><td>0.00</td><td>0.00</td>
-    <td>99.95</td><td>98.43</td><td>70.80</td><td>74.34</td><td>100.00</td><td>88.26</td><td>94.83</td><td>0.00</td>
+    <td><b>96.44</b></td><td>0.00</td><td>0.00</td><td><b>94.07</b></td><td><b>48.07</b></td><td>0.00</td><td>0.00</td>
+    <td><u>99.95</u></td><td><b>98.43</b></td><td>70.80</td><td>74.34</td><td><b>100.00</b></td><td>88.26</td><td><b>94.83</b></td><td>0.00</td>
     <td>0.00</td><td>0.00</td><td>0.00</td><td>0.00</td><td>0.00</td><td>0.00</td><td>0.00</td><td>0.00</td>
+    <td>33.80</td>
   </tr>
 
   <tr>
     <td><b>RA-Det</b></td>
-    <td><b>58.42</b></td><td><b>29.18</b></td><td><b>6.53</b></td><td><b>33.99</b></td><td><b>11.70</b></td><td><b>46.73</b></td><td><b>36.10</b></td>
-    <td><b>100.00</b></td><td><b>91.79</b></td><td><b>99.05</b></td><td><b>93.26</b></td><td><b>100.00</b></td><td><b>99.46</b></td><td><b>89.40</b></td><td><b>64.50</b></td>
+    <td><u>58.42</u></td><td><b>29.18</b></td><td><b>6.53</b></td><td><b>33.99</b></td><td><u>11.70</u></td><td><b>46.73</b></td><td><b>36.10</b></td>
+    <td><b>100.00</b></td><td>91.79</td><td><b>99.05</b></td><td><u>93.26</u></td><td><b>100.00</b></td><td><u>99.46</u></td><td><u>89.40</u></td><td>64.50</td>
     <td><b>54.50</b></td><td><b>84.93</b></td><td><b>72.10</b></td><td><b>69.40</b></td><td><b>80.47</b></td><td><b>17.33</b></td><td><b>70.27</b></td><td><b>71.90</b></td>
+    <td><b>64.39</b></td>
   </tr>
   </tbody>
 </table>
-
 ## Table 2.
 
 *Robustness statistics under controlled perturbations. We report feature similarity and distance metrics between clean and perturbed representations for real and generated images across multiple generators.*
