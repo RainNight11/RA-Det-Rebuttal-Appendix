@@ -120,6 +120,7 @@
   </tr>
   </tbody>
 </table>
+
 *(c) TPR at 1% FPR (↑)* 
 
 <table>
